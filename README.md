@@ -1,17 +1,15 @@
-# RF Static Probe
+# Example Brand (static probe)
 
-Throwaway experiment. A local WordPress Studio site is exported with the free Simply Static plugin. This repo is that folder of HTML files. GitHub Pages serves them.
+A Simply Static export of the local WordPress probe running the CDS theme. Example Brand is the placeholder identity. The walk in the header is the system: Start, Color, Type, Layout, Sections, then The site.
 
 Live: https://roots-and-fruit.github.io/rf-static-probe/
 
-This is not rootsandfruit.com.
+The kit itself (HTML reference + theme source) lives in [design-system-template](https://github.com/Roots-and-Fruit/design-system-template). This repo is only the exported files. Not rootsandfruit.com.
 
 ## Loop
 
-1. Start the Studio site `RF Static Probe` (`C:\Users\reach\Studio\rf-static-probe`, http://localhost:8893).
-2. Edit pages in WordPress.
-3. Simply Static → Generate (local directory: `static-export`).
-4. Run `.\ship-to-pages.ps1` from the Studio site folder.
-5. Commit and push this repo.
-
-WordPress stays on the laptop. GitHub Pages only sees files.
+1. Studio site `rf-static-probe` at http://localhost:8893
+2. `node scripts/sync-theme.mjs --dest "C:/Users/reach/Studio/rf-static-probe/wp-content/themes/cds"`
+3. `studio wp --path ... eval-file wordpress/probe-seed-showcase.php`
+4. Simply Static → `static-export`
+5. Copy that folder here, commit, push
